@@ -26,6 +26,7 @@ Trumps are chosen first, and the computer decides at random who leads. The openi
 may come from your hand or from the table, but the reply must come from the table — so a
 trick runs hand, table, table, hand or table, table, hand, hand.
 
+
 **Ranking.** Trumps: J 9 A 10 K Q 8 7. Other suits: A 10 K Q J 9 8 7. You must follow
 suit; if you cannot, you must trump; if trumps were led you must play higher when you can.
 
@@ -34,6 +35,41 @@ A=11, 10=10, K=4, Q=3. Three cards in sequence (A K Q J 10 9 8 7) are worth 20 m
 in sequence 50, and four of a kind 100. King and queen of trumps together are worth 20.
 The last trick adds 10. Take every point in the deal and you get 100 extra, or 200 if the
 other side chose trumps. A match runs to 1500 points.
+## Ranking
+
+| | Volgorde (hoog → laag) |
+|---|---|
+| Troef | J 9 A 10 K Q 8 7 |
+| Overige kleuren | A 10 K Q J 9 8 7 |
+
+**Regel:** Bekennen verplicht. Kan dat niet, dan moet je troeven. Is troef uitgekomen, dan moet je overtroeven indien mogelijk.
+
+## Puntenwaarde kaarten
+
+| Kaart | Niet-troef | Troef |
+|---|---|---|
+| A | 11 | 11 |
+| 10 | 10 | 10 |
+| K | 4 | 4 |
+| Q | 3 | 3 |
+| J | 2 | 10 |
+| 9 | 0 | 14 |
+| 8 | 0 | 0 |
+| 7 | 0 | 0 |
+
+## Meld
+
+| Combinatie | Punten |
+|---|---|
+| 3 kaarten in volgorde (elke kleur) | 20 |
+| 4 kaarten in volgorde (elke kleur) | 50 |
+| Vier van gelijk | 100 |
+| Koning + Vrouw troef | 20 |
+| Laatste slag | +10 |
+| Alle slagen (eigen partij koos troef) | +100 |
+| Alle slagen (tegenpartij koos troef) | +200 |
+
+**Speeldoel:** 1500 punten
 
 The cards keep their Dutch letters: **A**as, **H**eer, **V**rouw, **B**oer — ace, king,
 queen, jack.
