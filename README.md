@@ -26,27 +26,18 @@ Trumps are chosen first, and the computer decides at random who leads. The openi
 may come from your hand or from the table, but the reply must come from the table — so a
 trick runs hand, table, table, hand or table, table, hand, hand.
 
-
-**Ranking.** Trumps: J 9 A 10 K Q 8 7. Other suits: A 10 K Q J 9 8 7. You must follow
-suit; if you cannot, you must trump; if trumps were led you must play higher when you can.
-
-**Points.** A=11, 10=10, K=4, Q=3, J=2, and 9, 8, 7 score nothing. In trumps: J=10, 9=14,
-A=11, 10=10, K=4, Q=3. Three cards in sequence (A K Q J 10 9 8 7) are worth 20 meld, four
-in sequence 50, and four of a kind 100. King and queen of trumps together are worth 20.
-The last trick adds 10. Take every point in the deal and you get 100 extra, or 200 if the
-other side chose trumps. A match runs to 1500 points.
 ## Ranking
 
-| | Volgorde (hoog → laag) |
+| | Order (high → low) |
 |---|---|
-| Troef | J 9 A 10 K Q 8 7 |
-| Overige kleuren | A 10 K Q J 9 8 7 |
+| Trump | J 9 A 10 K Q 8 7 |
+| Other suits | A 10 K Q J 9 8 7 |
 
-**Regel:** Bekennen verplicht. Kan dat niet, dan moet je troeven. Is troef uitgekomen, dan moet je overtroeven indien mogelijk.
+**Rule:** You must follow suit. If you cannot, you must trump. If trump was led, you must play higher if possible.
 
-## Puntenwaarde kaarten
+## Card Points
 
-| Kaart | Niet-troef | Troef |
+| Card | Non-trump | Trump |
 |---|---|---|
 | A | 11 | 11 |
 | 10 | 10 | 10 |
@@ -59,17 +50,18 @@ other side chose trumps. A match runs to 1500 points.
 
 ## Meld
 
-| Combinatie | Punten |
+| Combination | Points |
 |---|---|
-| 3 kaarten in volgorde (elke kleur) | 20 |
-| 4 kaarten in volgorde (elke kleur) | 50 |
-| Vier van gelijk | 100 |
-| Koning + Vrouw troef | 20 |
-| Laatste slag | +10 |
-| Alle slagen (eigen partij koos troef) | +100 |
-| Alle slagen (tegenpartij koos troef) | +200 |
+| 3-card sequence (any suit) | 20 |
+| 4-card sequence (any suit) | 50 |
+| Four of a kind | 100 |
+| King + Queen of trumps | 20 |
+| Last trick | +10 |
+| All tricks (own side chose trumps) | +100 |
+| All tricks (opponents chose trumps) | +200 |
 
-**Speeldoel:** 1500 punten
+**Match target:** 1500 points
+
 
 The cards keep their Dutch letters: **A**as, **H**eer, **V**rouw, **B**oer — ace, king,
 queen, jack.
