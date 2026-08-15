@@ -1,0 +1,10 @@
+int  kjlegaal(char  h,char  w,char  *l,struct  hand *d);
+void  kjlegkaart(char  h,int  n,int  w,int  e,struct  hand *d);
+void  kjlegkaarttest(char  h,int  n,int  w,int  e,struct  hand *d);
+void  kjmaakslag(int  slag);
+int  kjmaakslagtest(char  wie);
+void  kjmaaktroef(char  troef,struct  kaart (*k)[8],struct  kaart (*h)[8]);
+void  kjtafel(char  f);
+int  kjtoets(void);
+void  kjtroefstat(void);
+char  kjtroef(void);

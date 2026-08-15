@@ -1,0 +1,14 @@
+C:\Users\ednie\Documents\Files\BLESerialAppDev\Klaverjas\KlaverjasTest\bin\Debug\net8.0\KlaverjasTest.exe
+C:\Users\ednie\Documents\Files\BLESerialAppDev\Klaverjas\KlaverjasTest\bin\Debug\net8.0\KlaverjasTest.deps.json
+C:\Users\ednie\Documents\Files\BLESerialAppDev\Klaverjas\KlaverjasTest\bin\Debug\net8.0\KlaverjasTest.runtimeconfig.json
+C:\Users\ednie\Documents\Files\BLESerialAppDev\Klaverjas\KlaverjasTest\bin\Debug\net8.0\KlaverjasTest.dll
+C:\Users\ednie\Documents\Files\BLESerialAppDev\Klaverjas\KlaverjasTest\bin\Debug\net8.0\KlaverjasTest.pdb
+C:\Users\ednie\Documents\Files\BLESerialAppDev\Klaverjas\KlaverjasTest\obj\Debug\net8.0\KlaverjasTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ednie\Documents\Files\BLESerialAppDev\Klaverjas\KlaverjasTest\obj\Debug\net8.0\KlaverjasTest.AssemblyInfoInputs.cache
+C:\Users\ednie\Documents\Files\BLESerialAppDev\Klaverjas\KlaverjasTest\obj\Debug\net8.0\KlaverjasTest.AssemblyInfo.cs
+C:\Users\ednie\Documents\Files\BLESerialAppDev\Klaverjas\KlaverjasTest\obj\Debug\net8.0\KlaverjasTest.csproj.CoreCompileInputs.cache
+C:\Users\ednie\Documents\Files\BLESerialAppDev\Klaverjas\KlaverjasTest\obj\Debug\net8.0\KlaverjasTest.dll
+C:\Users\ednie\Documents\Files\BLESerialAppDev\Klaverjas\KlaverjasTest\obj\Debug\net8.0\refint\KlaverjasTest.dll
+C:\Users\ednie\Documents\Files\BLESerialAppDev\Klaverjas\KlaverjasTest\obj\Debug\net8.0\KlaverjasTest.pdb
+C:\Users\ednie\Documents\Files\BLESerialAppDev\Klaverjas\KlaverjasTest\obj\Debug\net8.0\KlaverjasTest.genruntimeconfig.cache
+C:\Users\ednie\Documents\Files\BLESerialAppDev\Klaverjas\KlaverjasTest\obj\Debug\net8.0\ref\KlaverjasTest.dll
