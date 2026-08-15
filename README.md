@@ -3,9 +3,9 @@
 
 Klaverjas for two players, instead of four, against the computer. 
 
-Originally written in Turbo C for DOS,
-now rebuilt as a Windows 11 desktop program in C# and as a Swift app for iPad, iPhone
-and Mac. The hand-drawn cards from the 1990 original are still there, pixel for pixel.
+Originally written in Turbo C for DOS, now rebuilt as a Windows 11 desktop program in C# and as a Swift app for iPad, iPhone
+and Mac. 
+The hand-drawn cards from the 1990 original are still there, pixel for pixel.
 
 ## Where it came from
 
