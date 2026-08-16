@@ -1,0 +1,185 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>Klaverjas, a Dutch card game</TITLE>
+<META NAME="Template" CONTENT="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+<style type="text/css">
+<!--
+.style2 {font-family: Verdana, Arial, Helvetica, sans-serif}
+.style3 {font-size: x-small}
+.style5 {font-family: Verdana, Arial, Helvetica, sans-serif; font-style: italic; }
+.auto-style1 {
+	font-family: Verdana;
+}
+-->
+</style>
+</HEAD>
+<BODY LINK="#0000ff" VLINK="#800080">
+<H3 class="style2">&nbsp;</H3>
+<h1>Klaverjas</h1><br>
+<br>More on Github: <a href="https://github.com/ednieuw/Klaverjas">https://github.com/ednieuw/Klaverjas</a>
+<H3 class="style2"><br>
+<table style="width: 1024">
+	<tr>
+		<td style="width: 759px">
+<img src="klaverjasscherm.jpg" width="750" ></td>
+		<td style="width: 203px">Original DOS version 1994</td>
+	</tr>
+	<tr>
+		<td style="width: 759px">
+		<img alt="Klaverjas" src="Klaverjas2026.jpg" width="750"></td>
+		<td style="width: 203px">Windows 11 version 2026</td>
+	</tr>
+	<tr>
+		<td style="width: 759px"><img alt="Klaverjas" src="DMGklaverjas.png" width="750"></td>
+		<td style="width: 203px">MacOS version 2026</td>
+	</tr>
+</table>
+</H3>
+<table width="1024" border="0" cellspacing="1" cellpadding="5">
+  <tr>
+    <td width="500"><p class="style2"><br>
+  Dit is een klaverjasspel voor twee spelers geschreven in Turbo C++. Het programma is geboren op vakantie in het Franse plaatsje Guillermie.<br>
+  Daar werd na veel ploeteren een kansfunctie uitgedacht die de kans op een of meer kaarten bij de tegenstander kon berekenen, bij dit klaverjasspel,<br>
+  wat wij elke avond na het eten speelden.<br>
+  In het zonnetje werden de kaarten getekend en bij thuiskomst werd de eerste start voor dit programma gemaakt (Sept 1990).<br>
+  Het programma is geschreven voor een VGA display, maar EGA en Hercules kunnen ook. Bij EGA en Hercules vallen de onderste kaarten iets van het <br>
+  scherm af en wordt de laatste slag en de slagvolgorde niet meer aangegeven.</p>
+    <p class="style2">&nbsp;</p></td>
+    <td width="501"><p class="style2">This program was made to play Klaverjas against the computer. I played it a lot on holidays and thought it was nice to make a computer version of the game.<br>
+  A lot of time was spent to recall the statistics to calculate the odds that the opponent had a card (e.g. 10 clubs) in his hand. <br>
+  We were on holiday and had no books. After buying a calculator, that could calculate factorials, the formulae was found and called Guilermie, after the village near Vichy in France where we were camping.<BR>
+  The cards were designed on paper with millimeter squares with colored pencils and eventually the holiday was over.<BR>
+  Making the program was not as easy as I initially thought, but after several months the program worked and here is the result. <BR>
+  The game is a typical Dutch game but the rules may be found in specialized card game books.<BR>
+  Normally the game is played with four players.<BR>
+  The cards of the third and the fourth player are laid down on the table, four open and four closed.<BR>
+  The cards first played may be from the table or the hand, the second card, played by the opponent, must be played from the table. So you are playing for yourself and the third person. The computer plays the opponent and the fourth player. <br>
+    </p>
+    <p class="style2">  &nbsp;</p></td>
+  </tr>
+  <tr>
+    <td><span class="auto-style1">Het programma werkt als volgt:</span><br class="auto-style1">
+	<span class="auto-style1">Er zijn 8 kaarten in de hand en 8 kaarten op tafel waarvan vier dicht onder de open kaarten voor elke speler.</span><br class="auto-style1">
+	<span class="auto-style1">Er moet eerst troef gekozen worden. De computer bepaalt willekeurig wie begint.</span><br class="auto-style1">
+	<span class="auto-style1">De uitkomst mag uit de hand of van tafel, maar daarna moet vanaf de tafel gespeeld worden.
+	</span> <br class="auto-style1">
+	<span class="auto-style1">De laatste slag is weer uit de hand van de tegenspeler.</span><br class="auto-style1">
+	<span class="auto-style1">Dus hand, tafel, tafel, hand of tafel, tafel, hand, hand.</span></td>
+    <td><span class="auto-style1">The program works like this: </span>
+	<br class="auto-style1"><span class="auto-style1">There are 8 cards in hand 
+	and 8 cards on the table, with four face-down cards under the face-up ones 
+	for each player. </span><br class="auto-style1"><span class="auto-style1">
+	Trump must be chosen first. </span><br class="auto-style1">
+	<span class="auto-style1">The computer randomly decides who starts. </span>
+	<br class="auto-style1"><span class="auto-style1">You can play from your 
+	hand or from the table first, but after that, you have to play from the 
+	table. </span><br class="auto-style1"><span class="auto-style1">The last 
+	trick is again played from the opponent's hand. </span>
+	<br class="auto-style1"><span class="auto-style1">So hand, table, table, 
+	hand or table, table, hand, hand.</span></td>
+  </tr>
+  <tr>
+    <td><p class="style2">De kaartslagvolgorde bij troef is : B 9 A T H V 8 7.<br>
+  De niet troefkaarten hebben de volgorde : A T H V B 9 8 7.<br>
+  Je moet de kleur bekennen die gevraagd wordt.<br>
+  Heb je die kleur niet dan moet je troeven.<br>
+  Als er troef wordt gevraagd moet de volgende troefkaart die gespeeld wordt hoger zijn indien mogelijk. <br>
+  Is er geen troef meer dan mag een andere kaart worden geworpen.</p>
+      <p class="style2">&nbsp;</p>
+      <p class="style2">De punten telling gaat als volgt A=11, T=10, H=4, V=3, B=2, en de rest (9, 8 en 7) nul punten. Bij troef kaarten geldt: B=10, 9=14, A=11,<br>
+  T=10, H=4, V=3 en de 8 en 7 geen punten.</p>
+	<p class="style2"><br>
+  Er zijn ook roempunten te behalen.<br>
+  Als er een 'driekaart' valt, dwz. drie opeenvolgende kaarten van de volgende volgorde A H V B T 9 8 7 , bijv. HVB of BT9, dan worden er 20 punten<br>
+  bij degene die de slag haalt bijgeteld. Een vierkaart, bijv. HVBT of AHVB levert 50 punten op.<br>
+  Vier dezelfde kaarten, bijv HHHH van de vier kleuren levert 100 punten extra op. (Helaas een bug en als dit valt geen punten) <br>
+  Bij troef is er nog 'het stuk', nl. HV, dit levert 20 punten extra op.<br>
+  De laatste slag levert 10 punten roem op.<br>
+  Zijn alle punten bij een speler gevallen (152+10) dan krijgt deze speler 100 punten extra. Is deze speler niet degene die troef heeft gemaakt, dan<br>
+  nog eens 100 punten extra.<br>
+  Na een slag moet een toets of mousebutton gedrukt worden om de volgende slag te spelen.<br>
+  Een spel is be&euml;indigt bij 1500 punten.</p>
+      </td>
+    <td><span class="auto-style1">The card ranking order for trump is: J 9 A 10 
+	K Q 8 7. <br>The non-trump cards have the order: A 10 K Q J 9 8 7. <br>You 
+	must follow the suit that is asked for. <br>If you don't have that suit, you 
+	must play a trump. If a trump is asked for, the next trump card played must 
+	be higher if possible. <br>If there are no more trumps, you can play another 
+	card. <br><br>The points are counted as follows: A=11, 10=10, K=4, Q=3, J=2, 
+	and the rest (9, 8, and 7) score zero points. For trump cards: J=10, 9=14, 
+	A=11, 10=10, K=4, Q=3, and 8 and 7 score no points.</span><br class="auto-style1">
+	<br class="auto-style1"><span class="auto-style1">You can also earn bonus 
+	points. <br>If a 'three-card' comes up, i.e., three consecutive cards in the 
+	following order A K Q J 10 9 8 7, e.g., KQJ or J10 9, then 20 points are 
+	added for the player who wins the trick. <br>A four-card, e.g., KQJ10 or 
+	AKQJ, gives 50 points. <br>Four of the same card, e.g., KKKK from all four 
+	suits, gives an extra 100 points. (Unfortunately, a bug exists, so if this 
+	happens no points are awarded) <br>With trump there is also 'the piece', 
+	namely KQ, which gives an extra 20 points. The last trick gives 10 bonus 
+	points. If all points have gone to one player (152+10), that player gets an 
+	extra 100 points. If that player didn’t make trump, then another 100 points 
+	is added. After a trick, a key or mouse button must be pressed to play the 
+	next trick. A game ends at 1500 points.</span></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <p class="style2">&nbsp;</p>
+    <p class="style2">Veel succes en probeer maar van dit spel te winnen.<br>
+      <br>
+    </p>
+    </td>
+  </tr>
+  <tr>
+    <td class="auto-style1" style="height: 23px"><a href="Klaverjas.exe">
+	<strong>Download Windows 11 versie</strong></a></td>
+    <td class="auto-style1" style="height: 23px">Deze exe draait op Windows 11</td>
+  </tr>
+  <tr>
+    <td class="auto-style1"><a href="KlaverJasDMG.zip"><strong>Download MacOS 2026 DMG 
+	versie</strong></a></td>
+    <td class="auto-style1">Pack de Zip uit en sleep de DMG bij je programma 
+	(application)</td>
+  </tr>
+  <tr>
+    <td><DL class="style2">
+      <dd>&nbsp;</dd>
+      <DT><A HREF="kj.zip"><B>Download the klaverjas program for DOS</B></A> </DT>
+    </dl></td>
+    <td><span class="style2">Dit is de DOS-only versie . Deze versie kan gespeeld worden in Windows 95, 98, ME, 2000, ME and XP </span></td>
+  </tr>
+  <tr>
+    <td><a href="Klaverjas.zip" class="style2"><strong>Download  klaverjas in a DOS-box </strong></a></td>
+    <td><p class="style2">&nbsp;</p>
+      <p class="style2">Deze versie draait in een Windows DOS-box en is geschikt voor Vista en Windows 7. </p>
+      <p class="style2"><em>This version runs in a DOS-box and can be run on all Windows versions including Vista and Windows 7. </em></p>      
+      <p class="style5">Unpack all files in Program files in a folder named Klaverjas and start StartKJ.exe <br>
+      Otherwise edit the file dosbox.conf. (Last sentences of this file) </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><img src="KJ-in-W7.jpg" width="699" height="511"><br>
+      In a DOS-box in windows 7 </td>
+  </tr>
+</table>
+<DL class="style2"><DD>
+</dl>
+<P class="style2">&nbsp; </P>
+<H3 class="style2">Mastermind </H3>
+<P class="style2">Try to guess/solve the right position of the colored bulbs. </P>
+<DL class="style2">
+<DT><A HREF="mastermi.zip"><B>Download the mastermind program for Windows</B></A> </DT>
+</DL>
+<p><span class="style2"><img src="MM-in-W7.jpg" width="700" height="511"><BR>
+</span>This page revised, 16 august 2026<br>7 februari 2009,
+31 december 2006, 7 November, 1996 </p>
+<p> Ed Nieuwenhuys<BR>
+</p>
+
+</BODY>
+</HTML>
