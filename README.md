@@ -81,33 +81,8 @@ shows how it adds up.
 ## Running it
 
 The finished program is in `Klaverjas-app/` — a single self-contained `Klaverjas.exe` that
-needs nothing installed. Start it with `/en` for English, `/snel` to go straight to fast
-play.
-
-To build from source:
-
-```bash
-dotnet publish Klaverjas/KlaverjasWin -c Release -r win-x64 --self-contained -o Klaverjas/Klaverjas-app
-```
-
-## What is in this folder
-
-| | |
-|---|---|
-| `KJ/` | the original Turbo C sources from 1990–1994 |
-| `KJBeide/` | both C versions side by side, including R. Loggen's |
-| `KlaverjasWin/` | the C# program — `Engine/` is the game, `Ui/` is Windows |
-| `KlaverjasTest/` | headless test harness; also proves the engine is portable |
-| `KlaverjasSwift/` | the iPad, iPhone and Mac version |
-| `spoor-*.txt` | reference traces used to check that nothing drifted |
-
-`LEESMIJ-CSharp.md` documents the port in full, in Dutch: where every file came from and
-every place the new version departs from the old one.
-
-## One old bug, fixed
-
-The DOS version awarded nothing for four of a kind — the page on ednieuw.nl warned about
-it for years. It works now.
+needs nothing installed. 
+It starts in the default language of your system. This can be chnged between Dutch and English in the program.
 
 ---
 
