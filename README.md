@@ -18,7 +18,7 @@ pencils in the sun; the first version of the program followed at home in Septemb
 
 ## The game
 
-Klaverjas is normally played by four. In this two-player variant the third and fourth
+Klaverjas is normally played by four players. In this two-player variant the third and fourth
 player's cards lie on the table: eight per side, four face up with four face down beneath
 them. You play for yourself and for your table.
 
