@@ -7,9 +7,12 @@ Originally written in Turbo C for DOS, now rebuilt as a Windows 11 desktop progr
 and Mac. 
 The hand-drawn cards from the 1990 original are still there, pixel for pixel.
 
+<img width="900" alt="1-spelen" src="https://github.com/user-attachments/assets/9916a191-ce2e-4104-b399-77ee60086f3d" />
+
+
 ## Where it came from
 
-The program was born on a camping holiday in Guillermie, a village near Vichy in France,
+The program was born on a camping holiday in La Guillermie, a village near Vichy in France,
 where we played this game every evening after dinner. The hard part was the statistics:
 working out the odds that the opponent holds a particular card, with no books at hand.
 After buying a calculator that could do factorials the formula was found, and it is still
@@ -82,8 +85,9 @@ shows how it adds up.
 
 The finished program is in `Klaverjas-app/` — a single self-contained `Klaverjas.exe` that
 needs nothing installed. 
-It starts in the default language of your system. This can be chnged between Dutch and English in the program.
+It starts in the default language of your system. This can be cahnged between Dutch and English in the program.
 
+<img width="900" alt="Opties" src="Pics/mac-nl/5-opties.png" />
 ---
 
 ©2026 Ed Nieuwenhuys — [ednieuw.nl](https://ednieuw.nl)
