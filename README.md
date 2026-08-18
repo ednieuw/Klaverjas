@@ -15,9 +15,9 @@ The MacOS version as DMG. Just drag it in the application folder.
 
 The hand-drawn cards from the 1990 original are still there, pixel for pixel.
 
-<img width="900" alt="1-spelen" src="https://github.com/user-attachments/assets/9916a191-ce2e-4104-b399-77ee60086f3d" />
+<img width="900" alt="1-spelen" src="Pics/mac-nl/1-spelen.png" />
 
-<img width="900" alt="Opties" src="Pics/mac-nl/5-opties.png" />
+<img width="900" alt="Opties" src="Pics/Klaverjas2026W11.jpg" />
 
 ## Where it came from
 
