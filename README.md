@@ -17,6 +17,7 @@ The hand-drawn cards from the 1990 original are still there, pixel for pixel.
 
 <img width="900" alt="1-spelen" src="https://github.com/user-attachments/assets/9916a191-ce2e-4104-b399-77ee60086f3d" />
 
+<img width="900" alt="Opties" src="Pics/mac-nl/5-opties.png" />
 
 ## Where it came from
 
