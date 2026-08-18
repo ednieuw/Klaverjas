@@ -1,0 +1,29 @@
+Klaverjas 1.0
+
+Sleep Klaverjas naar de map Programma's.
+
+De eerste keer openen
+---------------------
+macOS kent deze app nog niet en waarschuwt daarom bij de eerste start.
+Klik met de rechtermuisknop (of Ctrl+klik) op Klaverjas en kies Openen.
+Bevestig daarna nog een keer met Openen. Vanaf dan start hij gewoon.
+
+Blijft hij geweigerd worden, ga dan naar
+Systeeminstellingen > Privacy en beveiliging, scrol naar beneden en
+klik bij de melding over Klaverjas op "Toch openen".
+
+Wat je nodig hebt
+-----------------
+macOS 14 of nieuwer. Werkt op zowel Apple Silicon als Intel.
+
+Spelen
+------
+Klik op een kaart om hem te spelen. Bij uitkomen mag je kiezen uit je
+hand of van je tafel; daarna licht alleen de stapel op die aan de beurt
+is. Troef kiezen kan met de muis of met de toetsen K, S, R en H.
+Na elke slag: klik of druk een toets om verder te gaan.
+
+Rechts staan de schakelaars voor demo, de kaarten van Noord tonen,
+automatisch doorgaan en de taal.
+
+Ed Nieuwenhuys - naar het Borland C-programma uit 1994

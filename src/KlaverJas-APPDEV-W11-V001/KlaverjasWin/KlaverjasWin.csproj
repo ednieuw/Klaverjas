@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>disable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <AssemblyName>Klaverjas</AssemblyName>
+    <RootNamespace>Klaverjas</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <!-- Geen symbolen: het programma wordt openbaar verspreid en anders staan
+         de bronpaden van deze machine in elke foutmelding. Foutmeldingen tonen
+         daardoor wel de methode maar geen regelnummer; zet dit tijdelijk op
+         "embedded" zodra je een fout wilt natrekken. -->
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+</Project>

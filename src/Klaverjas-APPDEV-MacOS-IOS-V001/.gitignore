@@ -1,0 +1,12 @@
+# Bouwresultaten: maken zichzelf opnieuw
+.build/
+DerivedData/
+*.xcarchive
+
+# Xcode-werkbestanden van de gebruiker
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+
+# macOS
+.DS_Store

@@ -1,0 +1,8 @@
+# Geen enkele omzetting van regeleindes, op geen enkel platform.
+#
+# Dit project bevat bestanden waarvan de bytes precies moeten blijven:
+# spoor-csharp.txt en spoor-zaad6-swift.txt worden regel voor regel vergeleken
+# met wat de C#-versie op Windows oplevert, en de bronbestanden uit 1994 staan
+# in CRLF. Zou git op Windows zijn gebruikelijke CRLF-omzetting doen, dan
+# verschuiven die bytes en klopt de vergelijking niet meer.
+* -text
