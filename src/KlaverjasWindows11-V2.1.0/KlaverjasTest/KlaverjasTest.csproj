@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>KlaverjasTest</AssemblyName>
+    <RootNamespace>Klaverjas.Test</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- De engine wordt rechtstreeks meegecompileerd; die hangt nergens van WinForms af. -->
+    <Compile Include="..\KlaverjasWin\Engine\*.cs" />
+    <!-- Idem voor de Ble-laag, op GastRadio.cs/GastheerRadio.cs na: die
+         gebruiken Windows.Devices.Bluetooth (WinRT) en hebben dus een
+         Windows-TFM nodig, die dit platformonafhankelijke testproject
+         bewust niet heeft. -->
+    <Compile Include="..\KlaverjasWin\Ble\*.cs"
+             Exclude="..\KlaverjasWin\Ble\GastRadio.cs;..\KlaverjasWin\Ble\GastheerRadio.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="BleTest.cs" />
+  </ItemGroup>
+
+</Project>

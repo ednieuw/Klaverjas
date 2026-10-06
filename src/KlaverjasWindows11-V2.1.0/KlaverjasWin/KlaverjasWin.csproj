@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <!-- Windows-versie in de TFM nodig voor Windows.Devices.Bluetooth (WinRT),
+         gebruikt door de gast-kant van het samenspel; zie Ble/GastRadio.cs. -->
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
+    <Nullable>disable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <AssemblyName>Klaverjas</AssemblyName>
+    <RootNamespace>Klaverjas</RootNamespace>
+    <!-- Vanaf nu gelijk aan de Mac/iOS-versie (zie BLUETOOTH-VOOR-WINDOWS2.1.0.md);
+         ook wat als <appversie> in de bluetooth-begroeting meegaat, zie GastRadio.cs. -->
+    <Version>2.1.0</Version>
+    <LangVersion>latest</LangVersion>
+    <!-- Geen symbolen: het programma wordt openbaar verspreid en anders staan
+         de bronpaden van deze machine in elke foutmelding. Foutmeldingen tonen
+         daardoor wel de methode maar geen regelnummer; zet dit tijdelijk op
+         "embedded" zodra je een fout wilt natrekken. -->
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- De achtergrond van het pictogram is dezelfde groene kleur als de rand van de afbeelding,
+     dus de afbeelding mag met een marge in het adaptieve vlak staan. -->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/ic_launcher_background" />
+    <foreground>
+        <inset android:drawable="@drawable/ic_launcher_fg" android:inset="10%" />
+    </foreground>
+</adaptive-icon>

@@ -1,0 +1,15 @@
+.gradle/
+build/
+local.properties
+.idea/
+*.iml
+.DS_Store
+captures/
+.kotlin/
+test-builds/
+
+# Ondertekening: de sleutel en het wachtwoord horen nooit mee naar GitHub.
+signing/
+*.jks
+keystore.properties
+uitgave/*.apk

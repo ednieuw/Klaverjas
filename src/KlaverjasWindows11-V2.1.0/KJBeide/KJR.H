@@ -1,0 +1,12 @@
+void  kjbekenjn(void);
+void  kjdelen(void);
+void  kjprkaart(char  k,char  n,char  h,unsigned char  c,unsigned char  r);
+void  kjprstat(int  u,int  max,char  w,char  h,char  *l,int  *p,int  k,struct  hand *d);
+void  kjpuntslag(int  *pt,int  *rm);
+void  kjsort(void);
+void  kjspel(void);
+void  kjspelen(void);
+void  kjstart(void);
+void  kjstatspel(void);
+void  kjvulhand(char  w,struct  hand *d);
+char  kjwieslag(void);

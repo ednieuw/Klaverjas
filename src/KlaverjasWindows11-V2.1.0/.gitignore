@@ -1,0 +1,15 @@
+# Bouwresultaten van dotnet build/publish - altijd opnieuw te maken,
+# horen niet in broncodebeheer (en Klaverjas-app zit ver boven GitHub's
+# limiet per bestand).
+bin/
+obj/
+Klaverjas-app/
+
+# Diagnostisch logbestand van de BLE-gastradio (Ble/BleLog.cs), ontstaat
+# alleen naast een draaiende Klaverjas.exe.
+klaverjas-ble-log.txt
+
+# Visual Studio / Rider rommel.
+.vs/
+*.user
+*.suo

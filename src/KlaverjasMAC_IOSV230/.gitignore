@@ -1,0 +1,11 @@
+# Bouwmappen: Xcode en SwiftPM maken die zelf weer aan. Ze zijn goed voor ruim
+# vijfduizend bestandjes en vierhonderd megabyte, en horen niet in een kopie of
+# in een opslagplaats thuis.
+.build/
+.swiftpm/
+DerivedData/
+*.xcuserdatad/
+xcuserdata/
+
+# Rommel van de Finder.
+.DS_Store

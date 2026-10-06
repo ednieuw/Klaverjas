@@ -1,23 +1,46 @@
 
-# Klaverjas
+# Klaverjas-42
 
-Klaverjas for two players, instead of four, against the computer. 
+Klaverjas for two players, instead of four, against the computer. The 42 stands for *for two*: klaverjas is officially played by four.
 
 ## Dutch text below
 
 Originally written in Turbo C for DOS, now rebuilt as a Windows 11 desktop program in C# and as a Swift app for iPad, iPhone
-and Mac. 
+and Mac (iOS 16 or later, macOS 14 or later). 
 
 The last ones can be downloaded from the Apple app store for free. 
 
 The Windows version is in this repository as exe file.<br> 
-The MacOS version as DMG. Just drag it in the application folder.
+The MacOS version as DMG. Just drag it in the application folder.<br>
+The iPhone and Mac version are in the Apple app store.<br>
+The Android phone version as APK.
 
 The hand-drawn cards from the 1990 original are still there, pixel for pixel.
 
 <img width="900" alt="1-spelen" src="Pics/mac-nl/1-spelen.png" /><br>MacOS version
 
 <img width="900" alt="Opties" src="Pics/Klaverjas2026W11.jpg" /><br>Windows version
+
+## The latest version (Apple app and Android app, 2.3.0)
+
+- **Three computer players to play against, or to watch each other:** Ednieuw (rules of thumb),
+  Ronlog (searches the trick through) and the new **Claude** (plays the whole game out, "brute force").
+  See *Three computer players* below.
+- **Play together over Bluetooth** with a second iPhone, iPad or Mac that has the app. One device opens up,
+  the other searches. You keep a separate score per partner and can remove a partner from the list in the
+  statistics screen.
+- **Now also on Android** (2.3.0), with the same three computer players, and it **plays together with the Apple app
+  over Bluetooth**: a phone or tablet with Android 8 or later can team up with an iPhone, iPad or Mac, in either role.
+- **Your own name for playing together.** An iPhone no longer shares its own name with apps, so every iPhone showed up
+  as "iPhone". In the Bluetooth screen you can now type the name the other player sees; the Android app also asks who
+  the other player is when it only sees "iPhone" or "iPad", so every partner keeps their own score.
+- **Fast play without cards** runs the computer against itself, over a thousand deals a second. The statistics
+  screen shows the results and how often each rule of thumb was used.
+- **Statistics, language and options are remembered.** Dutch or English follows your device and can be
+  switched in the options.
+- Two old mistakes from 1994 are corrected in the Apple version: the trump choice for the second player (North) read
+  the wrong flag, and the shuffle gave the first player slightly better cards. The "four of a kind" meld, which
+  never scored in the old program, now scores.
 
 ## Where it came from
 
@@ -70,7 +93,7 @@ trick runs hand, table, table, hand or table, table, hand, hand.
 |---|---|
 | 3-card sequence (any suit) | 20 |
 | 4-card sequence (any suit) | 50 |
-| Four of a kind | 100 |
+| Four of a kind | 100 (four jacks: 200) |
 | King + Queen of trumps | 20 |
 | Last trick | +10 |
 | All tricks (own side chose trumps) | +100 |
@@ -82,23 +105,48 @@ trick runs hand, table, table, hand or table, table, hand, hand.
 The cards keep their Dutch letters: **A**as, **H**eer, **V**rouw, **B**oer — ace, king,
 queen, jack.
 
-## Two computer players
+## Three computer players
 
-You can pick who plays each side, and watch them play each other:
+You can pick who plays each side, and watch them play each other. The Windows version has two players,
+called **Ed** and **Loggen**; in the Apple app they are called **Ednieuw** and **Ronlog**, and a third has
+been added:
 
-- **Ed** — the rules of thumb from the original program, with the Guilermie odds.
-- **Loggen** — R. Loggen's version, which searches the trick through instead of judging it.
+- **Ednieuw** — the rules of thumb from the original program (67 numbered rules, which you can see counted in
+  the statistics screen), built on the *Guillermie* odds that the opponent holds a higher card.
+- **Ronlog** — R. Loggen's version, which searches the trick through instead of judging it: every card you can
+  play is tried, the opponent gets his best reply, and the value is card points plus meld.
+- **Claude** — plays the whole game out. He cannot see what the opponent holds, so he deals those cards out
+  again and again at random, within what is known, plays every card he may play to the end of the deal with
+  pit, melds and "going wet" counted, and picks the card that scores best on average. Trump is chosen the same
+  way. He only uses what a player at the table could see (at the opening 16 of the 32 cards), which is
+  checked by a test that shuffles the hidden cards and verifies that his choices do not change.
+  *Claude is only in the Apple app for now, not in the Windows exe.*
 
-They are close. Loggen wins slightly more deals (about 51%) because he plays for meld;
-Ed is ahead on raw card points. *Options → Fast play without cards* runs them against each
-other with no drawing at all, a few thousand deals a second, and the statistics screen
-shows how it adds up.
+Ednieuw and Ronlog are close: Ronlog wins slightly more deals (about 51%) because he plays for meld, Ednieuw is
+ahead on raw card points. Claude is clearly stronger but takes a much longer calculation time. Over 1000 deals, each played twice with the cards swapped between the two sides (2000 deals per duel):
+
+| | Claude | Ednieuw | | Claude | Ronlog |
+|---|---:|---:|---|---:|---:|
+| Deals won | 1214 | 786 | | 1208 | 792 |
+| Share of deals | **60.7%** | 39.3% | | **60.4%** | 39.6% |
+| Share of points | 56.1% | 43.9% | | 55.0% | 45.0% |
+| Went wet (lost all points of a deal) | 106 | 320 | | 104 | 312 |
+
+A large part of the difference shows in "went wet": whoever chose trumps and does not score more than the opponent
+loses everything of that deal, and Claude ends up there about three times less often. He still loses four deals
+out of ten, and how this works out over a whole match, or against people, has not been measured. A move takes
+about a millisecond.
+
+*Options → Fast play without cards* runs two of them against each other with no drawing at all, and the
+statistics screen shows how it adds up.
 
 ## Running it
 
-The finished program is in `Klaverjas-app/` — a single self-contained `Klaverjas.exe` that
-needs nothing installed. 
-It starts in the default language of your system. This can be changed between Dutch and English in the program.
+The finished program is for Windows as an EXE and for the Mac as a DMG file and for an Android phone as a APK file in the APPS folder. Those need nothing installed. 
+
+The Apple iphone and Mac apps can be downloaded from their app store.
+
+The app starts in the default language of your system. This can be changed between Dutch and English in the program.
 
 # Klaverjas
 
@@ -107,6 +155,7 @@ It starts in the default language of your system. This can be changed between Du
 | Dit is een klaverjasspel voor twee spelers geschreven in Turbo C++. Het programma is geboren op vakantie in het Franse plaatsje La Guillermie.<br>Daar werd na veel ploeteren een kansfunctie uitgedacht die de kans op een of meer kaarten bij de tegenstander kon berekenen, bij dit klaverjasspel, wat wij elke avond na het eten speelden.<br>In het zonnetje werden de kaarten getekend en bij thuiskomst werd de eerste start voor dit programma gemaakt (Sept 1990).<br> R. Loggen maakte zijn eigen brute force versie terwijl mijn programma de tactiekregels zoals ik die uitvoer volg. Je ziet deze regels terug in de statistiekpagina.   | This program was made to play Klaverjas against the computer. I played it a lot on holidays and thought it was nice to make a computer version of the game.<br>A lot of time was spent to recall the statistics to calculate the odds that the opponent had a card (e.g. 10 clubs) in his hand.<br>We were on holiday and had no books. After buying a calculator, that could calculate factorials, the formulae was found and called Guilermie, after the village La Guillermie near Vichy in France where we were camping.<br>The cards were designed on paper with millimeter squares with colored pencils and eventually the holiday was over.<br>Making the program was not as easy as I initially thought, but after several months the program worked and here is the result.<br>The game is a typical Dutch game but the rules may be found in specialized card game books.<br>Normally the game is played with four players.<br>The cards of the third and the fourth player are laid down on the table, four open and four closed.<br>The cards first played may be from the table or the hand, the second card, played by the opponent, must be played from the table. So you are playing for yourself and the third person. The computer plays the opponent and the fourth player. |
 | Het programma werkt als volgt:<br>Er zijn 8 kaarten in de hand en 8 kaarten op tafel waarvan vier dicht onder de open kaarten voor elke speler.<br>Er moet eerst troef gekozen worden. De computer bepaalt willekeurig wie begint.<br>De uitkomst mag uit de hand of van tafel, maar daarna moet vanaf de tafel gespeeld worden.<br>De laatste slag is weer uit de hand van de tegenspeler.<br>Dus hand, tafel, tafel, hand of tafel, tafel, hand, hand. | The program works like this:<br>There are 8 cards in hand and 8 cards on the table, with four face-down cards under the face-up ones for each player.<br>Trump must be chosen first.<br>The computer randomly decides who starts.<br>You can play from your hand or from the table first, but after that, you have to play from the table.<br>The last trick is again played from the opponent's hand.<br>So hand, table, table, hand or table, table, hand, hand. |
 | De kaartslagvolgorde bij troef is: B 9 A T H V 8 7.<br>De niet troefkaarten hebben de volgorde: A T H V B 9 8 7.<br>Je moet de kleur bekennen die gevraagd wordt.<br>Heb je die kleur niet dan moet je troeven.<br>Als er troef wordt gevraagd moet de volgende troefkaart die gespeeld wordt hoger zijn indien mogelijk.<br>Is er geen troef meer dan mag een andere kaart worden geworpen.<br><br>De punten telling gaat als volgt A=11, T=10, H=4, V=3, B=2, en de rest (9, 8 en 7) nul punten. Bij troef kaarten geldt: B=10, 9=14, A=11, T=10, H=4, V=3 en de 8 en 7 geen punten.<br><br>Er zijn ook roempunten te behalen.<br>Als er een 'driekaart' valt, dwz. drie opeenvolgende kaarten van de volgende volgorde A H V B T 9 8 7, bijv. HVB of BT9, dan worden er 20 punten bij degene die de slag haalt bijgeteld. Een vierkaart, bijv. HVBT of AHVB levert 50 punten op.<br>Vier dezelfde kaarten, bijv. HHHH van de vier kleuren levert 100 punten extra op. (Helaas een bug en als dit valt geen punten)<br>Bij troef is er nog 'het stuk', nl. HV, dit levert 20 punten extra op.<br>De laatste slag levert 10 punten roem op.<br>Zijn alle punten bij een speler gevallen (152+10) dan krijgt deze speler 100 punten extra. Is deze speler niet degene die troef heeft gemaakt, dan nog eens 100 punten extra.<br>Na een slag moet een toets of mousebutton gedrukt worden om de volgende slag te spelen.<br>Een spel is beëindigd bij 1500 punten. | The card ranking order for trump is: J 9 A 10 K Q 8 7.<br>The non-trump cards have the order: A 10 K Q J 9 8 7.<br>You must follow the suit that is asked for.<br>If you don't have that suit, you must play a trump. If a trump is asked for, the next trump card played must be higher if possible.<br>If there are no more trumps, you can play another card.<br><br>The points are counted as follows: A=11, 10=10, K=4, Q=3, J=2, and the rest (9, 8, and 7) score zero points. For trump cards: J=10, 9=14, A=11, 10=10, K=4, Q=3, and 8 and 7 score no points.<br><br>You can also earn bonus points.<br>If a 'three-card' comes up, i.e., three consecutive cards in the following order A K Q J 10 9 8 7, e.g., KQJ or J 10 9, then 20 points are added for the player who wins the trick.<br>A four-card, e.g., KQJ10 or AKQJ, gives 50 points.<br>Four of the same card, e.g., KKKK from all four suits, gives an extra 100 points. (Unfortunately, a bug exists, so if this happens no points are awarded)<br>With trump there is also 'the piece', namely KQ, which gives an extra 20 points. The last trick gives 10 bonus points. If all points have gone to one player (152+10), that player gets an extra 100 points. If that player didn't make trump, then another 100 points is added. After a trick, a key or mouse button must be pressed to play the next trick. A game ends at 1500 points. |
+| In de Apple-app (macOS, iPad, iPhone) kun je kiezen uit drie computerspelers.<br>**Ednieuw** speelt de vuistregels uit het oorspronkelijke programma, met de kansfunctie Guillermie. **Ronlog** is de versie van R. Loggen en rekent de slag door. **Claude** speelt het hele spel uit: hij verdeelt de kaarten die hij niet ziet telkens opnieuw willekeurig, speelt elke kaart die hij mag spelen tot het eind van het spel door, met pit en nat erbij, en kiest de kaart met de beste gemiddelde uitkomst (brute force). Daarbij kijkt hij alleen naar wat een speler aan tafel kan zien, en dat is met een test nagegaan. Claude wint ongeveer 60% van de spellen van zowel Ednieuw als Ronlog.<br>Je kunt ook met twee toestellen samen spelen via Bluetooth, met een eigen score per partner. In de Apple-app zijn twee oude fouten uit 1994 gecorrigeerd en telt vier dezelfde kaarten nu wel. | In the Apple app (macOS, iPad, iPhone) you can choose between three computer players.<br>**Ednieuw** plays the rules of thumb from the original program, with the Guillermie odds. **Ronlog** is R. Loggen's version, which searches the trick through. **Claude** plays the whole game out: he deals the cards he cannot see out again and again at random, plays every card he may play to the end of the deal with pit and going wet counted, and picks the card with the best average result (brute force). He only looks at what a player at the table could see, which is verified by a test. Claude wins about 60% of the deals against both Ednieuw and Ronlog.<br>You can also play together on two devices over Bluetooth, with a separate score per partner. The Apple app corrects two old mistakes from 1994, and four of a kind now scores. |
 | Veel succes en probeer maar van dit spel te winnen. | Good luck, and try to win this game. |
 
 Ed Nieuwenhuys

@@ -1,0 +1,8 @@
+<resources>
+    <!-- Only the window behind Compose; the real colours are in ui/Kleuren.kt. -->
+    <style name="Theme.Klaverjas" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">#12492E</item>
+        <item name="android:statusBarColor">#0C3622</item>
+        <item name="android:navigationBarColor">#0C3622</item>
+    </style>
+</resources>

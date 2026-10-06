@@ -1,0 +1,4 @@
+<resources>
+    <!-- Debug-pictogram (V2 naast V1): paarse achtergrond in plaats van groen. Overschrijft de kleur uit main. -->
+    <color name="ic_launcher_background">#4A2A7A</color>
+</resources>

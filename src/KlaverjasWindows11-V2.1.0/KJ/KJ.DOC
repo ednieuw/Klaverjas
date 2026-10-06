@@ -1,0 +1,165 @@
+
+Dit is een klaverjasspel voor twee personen geschreven in Turbo C++.
+Het programma is geboren op vakantie in het franse plaatsje Guillermie.
+Daar werd na veel ploeteren een kansfunctie uitgedacht die de kans op een
+of meer kaarten bij de tegenstander kon berekenen, bij dit klaverjasspel,
+wat wij elke avond na het eten speelden.
+In het zonnetje werden de kaarten getekend en bij thuiskomst werd de
+eerste start voor dit programma gemaakt (Sept 1990).
+Het programma is geschreven voor een VGA display, maar EGA en Hercules
+kunnen ook. Bij EGA en Hercules vallen de onderste kaarten iets van het 
+scherm af en wordt de laatste slag en de slagvolgorde niet meer aangegeven.
+
+Het programma werkt als volgt:
+Er zijn 8 kaarten in de hand en 8 kaarten op tafel waarvan vier dicht onder
+de open kaarten voor elke speler.
+Er moet eerst troef gekozen worden. De computer bepaalt willekeurig wie begint.
+De uitkomst mag uit de hand of van tafel, maar daarna moet vanaf de tafel 
+gespeeld worden. De laatste slag is weer uit de hand van de tegenspeler.
+Dus hand, tafel, tafel, hand of tafel, tafel, hand, hand.
+
+De kaartslagvolgorde bij troef is       : B 9 A T H V 8 7.
+De niet troefkaarten hebben de volgorde : A T H V B 9 8 7.
+Je moet de kleur bekennen die gevraagd wordt.
+Heb je die kleur niet dan moet je troeven.
+Als er troef wordt gevraagd moet de volgende troefkaart die gespeeld wordt
+hoger zijn indien mogelijk. 
+Is er geen troef meer dan mag een andere kaart worden geworpen.
+
+Het spel werkt in ieder geval met een Geniusmuis. 
+Met ander typen muis weet ik niet. Het programma kijkt of er een mousedriver
+geladen is en vraagt dan of je de muis wilt gebruiken. 
+Is er geen muis dan kunnen de kaarten met de hand worden ingetypt.
+Bijv. Harten aas = HA
+      Klaver tien = KT
+      Ruiten 8 = R8 enz.
+
+De punten telling gaat als volgt A=11, T=10, H=4, V=3, B=2, en de rest
+(9, 8 en 7) nul punten. Bij troef kaarten geldt: B=10, 9=14, A=11,
+T=10, H=4, V=3 en de 8 en 7 geen punten.
+Er zijn ook roempunten te behalen.
+Als er een 'driekaart' valt, dwz. drie opeenvolgende kaarten van de
+volgende volgorde A H V B T 9 8 7 , bijv. HVB of BT9, dan worden er 20 punten
+bij degene die de slag haalt bijgeteld. Een vierkaart, bijv. HVBT of
+AHVB levert 50 punten op.
+Vier dezelfde kaarten, bijv HHHH van de vier kleuren levert 100 punten
+extra op.
+Bij troef is er nog 'het stuk', nl. HV, dit levert 20 punten extra op.
+De laatste slag levert 10 punten roem op.
+Zijn alle punten bij een speler gevallen (152+10) dan krijgt deze speler
+100 punten extra. Is deze speler niet degene die troef heeft gemaakt, dan
+nog eens 100 punten extra.
+Na een slag moet een toets of mousebutton gedrukt worden om de volgende
+slag te spelen.
+Een spel is be‰indigt bij 1500 punten.
+
+Als bij het opstarten als argument iets wordt meegeven bijv: KJ GA dan wordt
+in VGA mode in zwart-wit gespeeld.
+Aan het einde van het spel wordt een overzicht van de punten gegeven.
+Als je bij de vraag: DEMO ? de 'd' drukt kan je alle kaarten zien en
+volgen hoe hij speelt.
+
+Veel succes en probeer maar van hem te winnen.
+
+Alleen het introscherm is ook te verkrijgen op de BBS'en onder de naam
+KRTDANS.
+
+DE KAARTEN VAN DIT PROGRAMMA ZIJN, TEGEN EEN VERGOEDING, OP MAAT TE MAKEN. 
+Bijvoorbeeld een aanzicht van je bedrijf op de AAS of een logo verwerkt
+in de kaarten.
+De plaatjes bestaan uit een matrix van kleurpunten. Op grafiekenpapier
+is een plaatje te ontwerpen.
+Hier is een voorbeeld van de boer.
+
+/*boer */
+strcpy(inputline[0], "ccccccccccccccccccccccccccccjjjjjccccccccccccccccc");
+strcpy(inputline[1], "ccccccccccccccccccccccccccjjjjjjjccccccccccccccccc");
+strcpy(inputline[2], "cccccccccccccccccccccccccjjjjjjjcccccccccccccccccc");
+strcpy(inputline[3], "ccccccccccccccccccccccccjjjjjjjccccccccccccccccccc");
+strcpy(inputline[4], "cccccccccccccccccccccccjjjjjjjcccccccccccccccccccc");
+strcpy(inputline[5], "cccccwwwwwwwwwwwwwccccjjjjjjjccccccccccccccccccccc");
+strcpy(inputline[6], "ccccwwwwwwwwwwwwwwwwpjjjjjjcccccccccwwwwwccccccccc");
+strcpy(inputline[7], "ccccccwwwwwwwwwwwwppjjjjjppccccccccwwwwwwwcccccccc");
+strcpy(inputline[8], "ccccwwwwwwwwwwwwwwwpjjjppppppccccccccccccccccccccc");
+strcpy(inputline[9], "ccwwwwwwwwwwwwwwcccpjjppppppppppcccccccccccccccccc");
+strcpy(inputline[10],"cwwwwwwwwwwwwwcccppppppppppppppppppcccccgggggggccc");
+strcpy(inputline[11],"cwwwwwwwwwwwwwcccppppppppppppppppppccgggggggjjgggc");
+strcpy(inputline[12],"cyyyyyyyyyyyyyccccpppppppppppppppppccgggjjggjjggjj");
+strcpy(inputline[13],"cyyyyyyyyyyyyycccccrrrrwwwwppppppcccggggjjggggggjj");
+strcpy(inputline[14],"cccccccycccccccccccrrrwwwwwwwwrrrcccggggggjjggjjgg");
+strcpy(inputline[15],"cccccccyycccccccccrrrwwzzwwzzwwrrccggjjgggjjggjjgg");
+strcpy(inputline[16],"cccccccyyyccccccccrrwwwwwzwwwwwrrcccgjjggjjggggggg");
+strcpy(inputline[17],"cccccccyyyyyccccccrrwwwwwzwwwwwrrcccgggggjjggggjjg");
+strcpy(inputline[18],"cccccccyyyyyycccccrrwwwwwzwwwwwrrcccccgggggjjggjjg");
+strcpy(inputline[19],"ccccccccyyyyyyccccrrrwwwrrrrwwwrrcccccccgggjjggggg");
+strcpy(inputline[20],"ccccccccyyyuyyycccrrrrwwrrrrwwwrrccccccccccuuuuccc");
+strcpy(inputline[21],"ccccccccyyyuuyyyccrrrrwwzzzzwwrrrccccccccccuuuuccc");
+strcpy(inputline[22],"ccccccccyyyuuuyyycccccczrrrrwzwrcccccccccccuuuuccc");
+strcpy(inputline[23],"ccccccccyyycuuuyyycccczwrrrrzwwzcccccccccccuuuuccc");
+strcpy(inputline[24],"cccccccccyycuuuccyyccczwrrrrwwwwzccccccccccuuuuccc");
+strcpy(inputline[25],"cccccccccycccuuucccyczwwwwwwwwwwzccccccccccuuuuccc");
+strcpy(inputline[26],"cccccccccycccuuuccccczwwwwwwwwwwwzeeeccccccuuuuccc");
+strcpy(inputline[27],"ccccccccccccccuuuccjjjjwwwjeeeeeeeeeeecccccuuuuccc");
+strcpy(inputline[28],"cccccccccccccccuuujjjjjjjjeeeeeeeeeeeeeccccuuuuccc");
+strcpy(inputline[29],"ccccccccccggggguuubbbjjjjeeeeeeeeeeeeeeecccuuuuccc");
+strcpy(inputline[30],"ccccccccgggggggguuubbbbbbeeeeeeeeeeeeeeecccuuuuccc");
+strcpy(inputline[31],"cccccccgggggggguguuubbbbeeeeeeeeeeeeeeeeeccuuuuccc");
+strcpy(inputline[32],"cccccccgggggggggguuubbbeeeeeeeeeeeeeeeegggcuuuuccc");
+strcpy(inputline[33],"ccccccgggggggggbbbuuubeeeeeeeeeeeeeeggggggcuuuuccc");
+strcpy(inputline[34],"ccccccggggggggbbbbuuueeeeeeeeeeeeeggggggggcuuuuccc");
+strcpy(inputline[35],"cccccggggggggbbbbbbuuueeeeeeeeeeegggggggggguuuuccc");
+strcpy(inputline[36],"cccccggggggggbbbbbguuueeeeeeeeeeggggggggggguuuuccc");
+strcpy(inputline[37],"cccccggggggggbbbbbbbuuueeeeeeeeegggggggggggguuuccc");
+strcpy(inputline[38],"cccccggggggggbbbbbbbuuueeeeeeeebbbggggggggggguuccc");
+strcpy(inputline[39],"iiiiiggggggggbbbbbbeeuuueeeeeebbbbbggggggggggguiii");
+strcpy(inputline[40],"iiiiiggggggggbbbbbeeeuuueeeeeebbbbbggggggggggggiii");
+strcpy(inputline[41],"iiiiiggggggggbbbbeeeeeuuueeeeebbbbbigggggggggggiii");
+strcpy(inputline[42],"iiiiggggggggbbbbbeeeeeuuueeeebbbbbbiiggggggggggiii");
+strcpy(inputline[43],"iiiiggggggggbbbbeeeeeeeuuueeebbbbbiiigggggggggiiii");
+strcpy(inputline[44],"iiiiggggggggbbbbeeeeeeeuuueebbbbbbiiggggggggggiiii");
+strcpy(inputline[45],"iiiiggggggggbbbeeeeeeeeeuuueebbbbbiigggggggggiiiii");
+strcpy(inputline[46],"iiiiggggggggbbbeeeeeeeeeeuuuebbbbbiiggggggggiiiiii");
+strcpy(inputline[47],"iiiiggggggggbbbeeeeeeeeeeuuuebbbbbiggggggggiiiiiii");
+strcpy(inputline[48],"iiiiggggggggbbeeeeeeeeeeebuuubbbbbgggggggggiiiiiii");
+strcpy(inputline[49],"iiiiggggggggbbeeeeeeeeeeebuuubbbbbgggggggggiiiiiii");
+
+Waarbij de volgende letters de volgende kleuren voorstellen.
+
+          case 'z': color = BLACK;
+          case 'b': color = BLUE; 
+          case 'g': color = GREEN;
+          case 'o': color = CYAN; 
+          case 'r': color = GREEN;
+          case 'p': color = MAGENTA;
+          case 'u': color = BROWN; 
+          case 'a': color = LIGHTGRAY;
+          case 'y': color = DARKGRAY; 
+          case 'c': color = LIGHTBLUE;
+          case 'i': color = LIGHTGREEN;
+          case 't': color = LIGHTCYAN; 
+          case 'j': color = LIGHTRED;  
+          case 'x': color = LIGHTMAGENTA;
+          case 'e': color = YELLOW;
+          case 'w': color = WHITE; 
+
+Mogelijke storingen:
+
+Letters in het scherm printen doorelkaar:
+Laad dan een ANSI.SYS driver in je config.sys met:device=ANSI.SYS of
+device=EANSI.SYS of een evt. andere ANSI.SYS driver.
+
+Het programma hangt tijdens het opstarten:
+Kies dan geen muis bij de vraag 'muis aanwezig ?'
+
+Het programma speelt vals:
+Geef dat aan mij door.
+
+Het scherm wordt wit en de printer gaat lopen:
+Weet ik, maar er ben er nog niet achter wat dat is.
+
+Andere storingen hoor ik ook graag.
+
+Ed Niewenhuys
+Haarlemmerdijk 84 c
+1013JG Amsterdam.
+020-225901

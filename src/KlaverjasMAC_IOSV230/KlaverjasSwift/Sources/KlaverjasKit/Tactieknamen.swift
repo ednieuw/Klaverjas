@@ -1,0 +1,91 @@
+extension Taal {
+    /// Wat de computer doet bij tactieknummer `nr`, kort genoeg voor één regel.
+    ///
+    /// De nummers komen uit de broncode van 1994 en zijn in alle drie de
+    /// versies dezelfde; `TACTIEKEN.md` beschrijft ze uitgebreider en vertelt
+    /// waar in de code ze staan. 44 en 61 zijn nooit toegekend.
+    public static func tactiekNaam(_ nr: Int) -> String {
+        switch nr {
+        case 0:  return t("geen tactiek", "no tactic")
+
+        // ------------------------------------------- uitkomen (speler1)
+        case 7:  return t("Zekere slag met de meeste roemkans", "Sure trick with the best meld chance")
+        case 1:  return t("Zekere tafelkaart, hij heeft een kale tien", "Sure table card, bare ten opposite")
+        case 2:  return t("Zekere handkaart, hij heeft een kale tien", "Sure hand card, bare ten opposite")
+        case 50: return t("Mijn aas tegen zijn kale tien", "My ace against his bare ten")
+        case 41: return t("Kleur aanspelen om troef kwijt te raken", "Lead a suit to shed a trump")
+        case 10: return t("Bijna zekere slag van tafel, met roem", "Near-certain trick from table, with meld")
+        case 62: return t("Bijna zekere slag uit de hand, met roem", "Near-certain trick from hand, with meld")
+        case 9:  return t("Zekere slag van tafel, geen troef", "Sure trick from table, no trump")
+        case 8:  return t("Zekere slag uit de hand, geen troef", "Sure trick from hand, no trump")
+        case 57: return t("Zekere slag van tafel, troef trekken", "Sure trick from table, drawing trumps")
+        case 58: return t("Zekere slag uit de hand, troef trekken", "Sure trick from hand, drawing trumps")
+        case 47: return t("Kleur aanspelen die ik zelf niet heb", "Lead a suit I don't hold myself")
+        case 11: return t("Beste slagkans van tafel", "Best trick chance from the table")
+        case 63: return t("Beste slagkans uit de hand", "Best trick chance from the hand")
+        case 5:  return t("Troef trekken met een lage kaart", "Draw trumps with a low card")
+        case 55: return t("Overige zekere slag van tafel", "Other sure trick from the table")
+        case 56: return t("Overige zekere slag uit de hand", "Other sure trick from the hand")
+        case 54: return t("Troef van tafel gebruiken", "Use the trump on the table")
+        case 13: return t("Lage kaart zonder roemkans", "Low card without meld chance")
+        case 14: return t("Lage kaart, geen troef", "Low card, no trump")
+        case 15: return t("De laagste kaart die er nog is", "The lowest card left")
+
+        // ------------------------------------ tweede kaart (tegenspeler1)
+        case 40: return t("Enige kaart van die kleur op tafel", "Only table card of the suit led")
+        case 18: return t("De enige hogere troef", "The only higher trump")
+        case 19: return t("Hogere troef met de beste kans", "Higher trump with the best chance")
+        case 42: return t("Van de hogere kaarten de minste roem", "Least meld among the higher cards")
+
+        // ---------------------------------------- derde kaart (speler2)
+        case 6:  return t("De achtergehouden kaart alsnog spelen", "Play the card held back earlier")
+        case 45: return t("De troef die weg moest", "The trump that had to go")
+        case 12: return t("Troef van tafel kwijtraken", "Get rid of the table trump")
+        case 36: return t("Enige kaart van die kleur", "Only card of that suit")
+        case 66: return t("De enige hogere troef", "The only higher trump")
+        case 67: return t("Hogere troef met een goede kans", "Higher trump with a good chance")
+        case 37: return t("Hogere troef met de meeste roem", "Higher trump with the most meld")
+
+        // ------------------------------------ vierde kaart (tegenspeler2)
+        case 38: return t("Enige kaart van die kleur", "Only card of that suit")
+        case 17: return t("Kan niet hoger: roem meepakken", "Cannot go higher: take the meld")
+        case 20: return t("Hogere troef met de meeste roem", "Higher trump with the most meld")
+        case 39: return t("Kan niet hoger: minste roem weggeven", "Cannot go higher: give away least meld")
+        case 30: return t("Enige hogere troef, of troef van tafel", "Only higher trump, or a table trump")
+
+        // ---------------------------------- bijspelen (bekijk_beste_slag)
+        case 16: return t("Beste tafelkaart van de gevraagde kleur", "Best table card of the suit led")
+        case 21: return t("Tafelkaart die de uitkomst verslaat", "Table card that beats the lead")
+        case 22: return t("Partner heeft de slag: roem meepakken", "Partner has the trick: take the meld")
+        case 49: return t("Handkaart die de uitkomst verslaat", "Hand card that beats the lead")
+        case 4:  return t("Slag is binnen: roem meepakken", "Trick is ours: take the meld")
+        case 23: return t("Minste roem weggeven, niet de tien", "Least meld away, but not the ten")
+        case 24: return t("Handkaart met de meeste roem", "Hand card with the most meld")
+        case 48: return t("Meeste roem zonder de slag over te nemen", "Most meld without taking the trick")
+        case 46: return t("Hogere kaart van die kleur", "Higher card of that suit")
+        case 3:  return t("De minste roem weggeven", "Give away the least meld")
+        case 26: return t("Laagste troef van tafel erbij", "Add the lowest trump from the table")
+        case 27: return t("Laagste troef uit de hand erbij", "Add the lowest trump from the hand")
+        case 28: return t("Overtroeven met troef van tafel", "Overtrump with a table trump")
+        case 29: return t("Overtroeven met troef uit de hand", "Overtrump with a hand trump")
+        case 31: return t("Troef uit de hand met de beste kans", "Hand trump with the best chance")
+        case 59: return t("Keuze teruggedraaid: er is ingetroefd", "Choice withdrawn: someone trumped in")
+        case 43: return t("Slag is binnen: de hoogste roem", "Trick is ours: the highest meld")
+        case 32: return t("De kaart met de minste roem", "The card with the least meld")
+        case 51: return t("Kale tien afgooien nu het kan", "Discard the bare ten while it is safe")
+        case 68: return t("Duurste rommel uit de hand", "Priciest junk from the hand")
+        case 52: return t("Kale tien van tafel afgooien", "Discard the bare ten from the table")
+        case 69: return t("Duurste rommel van tafel", "Priciest junk from the table")
+        case 60: return t("Introeven uit de hand, om de roem", "Trump in from hand, for the meld")
+        case 25: return t("Introeven van tafel, om de roem", "Trump in from table, for the meld")
+        case 34: return t("Van die kleur de minste roem", "Least meld of that suit")
+        case 33: return t("Goedkoopste kaart van die kleur", "Cheapest card of that suit")
+        case 64: return t("Hogere troef bijgooien", "Add a higher trump")
+        case 65: return t("Laagste troef bijgooien", "Add the lowest trump")
+        case 53: return t("Goedkoopste kaart, geen troef", "Cheapest card, no trump")
+        case 35: return t("Gooi maar wat: de goedkoopste", "Anything goes: the cheapest")
+
+        default: return t("onbekend", "unknown")
+        }
+    }
+}
